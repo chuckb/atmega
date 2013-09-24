@@ -1,0 +1,40 @@
+######### Patterened from https://github.com/damellis/attiny/blob/ide-1.5.x/attiny/avr/boards.txt ##########
+######### Much thanks to damellis ########
+
+menu.cpu=Processor
+menu.clock=Clock
+ 
+atmega.name=ATmega
+
+atmega.upload.tool=arduino:avrdude
+atmega.bootloader.unlock_bits=0x3F
+atmega.bootloader.lock_bits=0x0F
+atmega.bootloader.tool=arduino:avrdude
+atmega.build.core=arduino:arduino
+atmega.build.board=atmega
+atmega.build.variant=arduino:standard
+
+atmega.menu.cpu.atmega8=ATmega8
+atmega.menu.cpu.atmega8.upload.maximum_size=7168
+atmega.menu.cpu.atmega8.upload.speed=115200
+atmega.menu.cpu.atmega8.build.mcu=atmega8
+
+atmega.menu.clock.internal8=8 MHz (internal) 
+atmega.menu.clock.internal8.bootloader.low_fuses=0xe4
+atmega.menu.clock.internal8.bootloader.high_fuses=0xd9
+atmega.menu.clock.internal8.build.f_cpu=8000000L
+
+atmega.menu.clock.internal4=4 MHz (internal) 
+atmega.menu.clock.internal4.bootloader.low_fuses=0xe3
+atmega.menu.clock.internal4.bootloader.high_fuses=0xd9
+atmega.menu.clock.internal4.build.f_cpu=4000000L
+
+atmega.menu.clock.internal2=2 MHz (internal) 
+atmega.menu.clock.internal2.bootloader.low_fuses=0xe2
+atmega.menu.clock.internal2.bootloader.high_fuses=0xd9
+atmega.menu.clock.internal2.build.f_cpu=2000000L
+
+atmega.menu.clock.internal1=1 MHz (internal; default value) 
+atmega.menu.clock.internal1.bootloader.low_fuses=0xe1
+atmega.menu.clock.internal1.bootloader.high_fuses=0xd9
+atmega.menu.clock.internal1.build.f_cpu=1000000L
